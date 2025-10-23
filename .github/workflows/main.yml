@@ -92,7 +92,7 @@ jobs:
           
           # 2. 用 $'\n' 生成真实换行，按格式拼接内容
           # 结构：第一行加粗“发布时间”，第二行本地时间，第三行UTC时间
-          RELEASE_TIME_CONTENT="**自动发布于**"$'\n'"本地时间：$LOCAL_TIME"$'\n'"UTC 时间：$UTC_TIME"
+          RELEASE_TIME_CONTENT="**Auto Release At**"$'\n'"Local Time：$LOCAL_TIME"$'\n'"UTC Time：$UTC_TIME"
           
           # 3. 用 Here Document 写入环境变量（避免换行符被转义）
           echo "RELEASE_TIME<<EOF" >> $GITHUB_ENV
